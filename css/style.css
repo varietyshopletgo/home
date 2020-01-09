@@ -331,6 +331,8 @@ WORKS
 
 .work-comment {
   width: 60%;
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 
 .skill-img {
@@ -340,7 +342,6 @@ WORKS
 .work-message {
   margin-top: 3rem;
 }
-
 
 /*
 ------------------------------------------------
@@ -355,6 +356,7 @@ Price
 .price-wrap {
   background-image: url(../image/price/price-bg.png);
   background-size: cover;
+  padding-top: 30px;
 }
 
 .price-msg p{
@@ -471,7 +473,7 @@ table tbody th {
   table tr:nth-child(even){
   background-color: #fff;
 }
-
+}
 /*
 ------------------------------------------------
 Contact
@@ -482,7 +484,7 @@ Contact
 }
 
 .contact-wrap {
-  background-color: #F1F1F1;  
+  background-color: #f2f2f2;  
 }
 
 .contact-form p {
@@ -537,7 +539,6 @@ FOOTER
 */
 
 footer {
-  margin-top: 65px;
   height: 50px;
   background-color: #327D58 !important;
 } 

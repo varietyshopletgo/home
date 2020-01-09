@@ -1,0 +1,561 @@
+/*
+------------------------------------------------
+RESET
+------------------------------------------------
+*/
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+------------------------------------------------
+COMMON
+------------------------------------------------
+*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&display=swap&subset=japanese');
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #222;
+  /* ベースのサイズを10pxとする */
+  /* 32pxにしたいときは3.2remと書く */
+  font-size: 62.5%;
+}
+
+body{
+  font-size:1.6rem;/* 16px*/
+}
+
+section {
+  margin-top : -50px;
+  padding-top : 50px;
+}
+
+/*
+------------------------------------------------
+navibar
+------------------------------------------------
+*/
+.nav-link {
+  color: #fff !important;
+  font-size: 1.4rem !important;
+  font-weight: bold;
+}
+
+.navbar {
+  border-bottom:1px solid #fff;
+}
+
+.navbar-toggler {
+  border-color: rgba(0,0,0,0);
+}
+
+.navbar-nav li {
+  padding-right: 25px;
+}
+/*
+------------------------------------------------
+TOP
+------------------------------------------------
+*/
+.top {
+  background-color: #327D58;
+  padding-bottom: 2.5rem;
+}
+
+.top img {
+  width: 100%;
+}
+
+.top-col {
+  padding: 0 50px
+}
+
+.top-vision, .top-title, .top-subtitle, .top-shop {
+  margin-top: 3rem;
+}
+
+.top-p {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.scroll img {
+  width: 100px;
+  background-color: #327D58
+}
+
+/*
+------------------------------------------------
+SERVICE
+------------------------------------------------
+*/
+.section-title {
+  margin:6.5em auto
+}
+
+.service {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+
+}
+.service h1 {
+  font-size: 2em;
+  padding-top: 3rem;
+  font-weight: bold !important;
+}
+.service img {
+  /* width: 100%; */
+  padding-top: 3rem;
+}
+
+.service p {
+  width: 80%;
+  font-size: 1.4em;
+  margin: 2em auto;
+}
+
+.s-0 {
+  background: #E2ECBA;
+}
+
+.s-1 {
+  background: #CDE8E9;
+}
+
+.s-2 {
+  background: #CEE7D7;
+}
+
+.s-0, .s-1, .s-2 {
+  padding:.5rem .5rem;
+  margin-bottom: 6.5em;
+}
+
+.marker-pink {
+  background: linear-gradient(transparent 50%, #ffcccc  0%);
+  }
+/*
+------------------------------------------------
+service-message
+------------------------------------------------
+*/
+
+.service-btn p{
+  font-size: 2em;
+  font-weight: bold !important;
+  margin-bottom: 3rem;
+}
+
+.de{
+  background: #CDD866;
+}
+
+.co {
+  background: #94D0C9;
+}
+
+.wr {
+  background: #00803D;
+}
+
+.de, .co, .wr {
+  border-radius: 60px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.service-message {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.service-btn a {
+  font-size: 2rem;
+  margin-bottom: 6.5rem;
+  text-decoration: none !important;
+}
+
+.service-btn a:hover {
+  color:#000;
+}
+
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FDD41F;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #CFA901;
+  border-radius: 3px;
+}
+
+.btn-square-shadow:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+/*
+------------------------------------------------
+aboutus
+------------------------------------------------
+*/
+
+/* タイトル飾り */
+.marker-P-green {
+  background: linear-gradient(transparent 60%, #ccffcc 0%);
+  }
+
+.kakomi-tape3 {
+ position:relative;
+ padding: 35px 20px 15px;
+ margin: 2em auto;
+ width: 90%;
+ color: #555555; 
+ background-color: #e8ddbd;
+ box-shadow: inset 0 0 40px rgba(204, 186, 136,1), 0 2px 2px #ccc;
+}
+
+.title-tape3 {
+ position: absolute;
+ top: -15px;
+ left: 30px;
+ padding: 4px 10px;
+ color: #555555; 
+ font-weight: bold;
+ background-color: rgba(255,255,255,.4);
+ border-left: 2px dotted rgba(0,0,0,.1);
+ border-right: 2px dotted rgba(0,0,0,.1);
+ box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+ transform: rotate(-5deg);
+}
+
+.about {
+  background-color:#E2ECBA;
+  font-size: 1.2em;
+  padding:1em 3em 3em 3em;
+}
+
+.about-top-img {
+  padding-top: 150px;
+  padding-bottom: 150px; 
+}
+
+.cd-fixed-bg {
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cd-fixed-bg.cd-bg-1 {
+background-image: url("../image/about/about-test.jpg");
+}
+
+.cd-scrolling-bg {
+  min-height: 100%;
+}
+/*
+------------------------------------------------
+WORKS
+------------------------------------------------
+*/
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #6648b1;
+}
+
+.btn-primary:hover{
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+
+.work-comment {
+  width: 60%;
+}
+
+.skill-img {
+  width: 100%
+}
+
+.work-message {
+  margin-top: 3rem;
+}
+
+
+/*
+------------------------------------------------
+Price
+------------------------------------------------
+*/
+#price {
+  background-image: url(../image/price/price-bg.png);
+  background-size: cover;
+}
+
+.price-wrap {
+  background-image: url(../image/price/price-bg.png);
+  background-size: cover;
+}
+
+.price-msg p{
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.table-scope {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+}
+
+table tr {
+  /* background-color: #fff; */
+  background-color:rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #fff;
+}
+
+table tr:nth-child(even){
+  background-color: #eee;
+}
+
+table th,
+table td {
+  padding: .35em 1em;
+}
+
+table thead th {
+    font-size: 1em;
+    padding: 1em;
+}
+
+table thead tr{
+  font-size: 1.5em;
+  background-color: #fd6767;
+  color:#fff;
+}
+
+table tbody th {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.txt{
+   text-align: left;
+   font-size: 1.5em;
+}
+
+.price{
+  text-align: right;
+  color: #FF7043;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.price-table {
+  padding-bottom: 6.5rem;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    width:100%
+  }
+  table th{
+    background-color: #fd6767;
+    display: block;
+    border-right: none;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+    border: 1px solid #fd6767;
+  }
+  table td {
+    border-bottom: 1px dotted #bbb;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    position: relative;
+    padding: 1.5em 1em 1.5em 4em;
+    border-right: none;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    color: #000;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table tbody th {
+    color: #fff;
+    padding: 1em
+}
+  table tr:nth-child(even){
+  background-color: #fff;
+}
+
+/*
+------------------------------------------------
+Contact
+------------------------------------------------
+*/
+.contact {
+  background-color: #F1F1F1;
+  padding-bottom: 6.5rem;
+}
+
+.contact-form p {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height:30px;
+}
+
+input {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom:30px;
+  padding: 16px;
+  font-size: 1.5rem;
+  border: 1px solid #C4C4C4;
+}
+
+textarea {
+  width: 80%;
+  margin-top: 0px;
+  margin-bottom:30px;
+  padding: 100px;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #C4C4C4;
+}
+
+.contact-submit {
+  /* width: 160px; */
+  margin-top: 10px;
+  margin-bottom:40px;
+  font-size: 16px;
+  background-color: #C4C4C4
+  color #889eab;  
+  display: block;
+}
+
+.contact-text p {
+  padding-top: 1rem;
+}
+
+.contact-hello {
+  margin: 0 auto;
+  width: 300px;
+
+}
+
+/*
+------------------------------------------------
+FOOTER
+------------------------------------------------
+*/
+
+footer {
+  margin-top: 65px;
+  height: 50px;
+  background-color: #327D58 !important;
+} 
+footer h5 {
+  padding-top: 1.5rem;
+}
+
+/*
+------------------------------------------------
+IMPORT
+------------------------------------------------
+*/
+
+/* .fixed-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  
+}
+ 
+.bg01 {
+  background-image: url(../image/about/about-bg.png);
+} */

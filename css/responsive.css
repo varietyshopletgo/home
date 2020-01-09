@@ -1,0 +1,50 @@
+/*---Media Queries --*/
+
+/* lg 992- */
+@media (max-width: 992px) {
+  /* h1 {
+    font-size: 3.6rem;/* 36px*/
+  }
+  h2 {
+    font-size: 2.4rem;/* 24px*/
+  } */
+} 
+
+/* md 768-991*/
+@media (max-width: 768px) {
+  body{
+  /* line-height: 2;
+  }
+  h1{
+      font-size: 2.4rem;/* 24px*/
+  }
+  h2 {
+      font-size: 2rem;/* 20px*/
+  } 
+
+  .cd-fixed-bg {
+    background-size: contain;
+  }
+}
+
+
+/* sm 576-767 */
+@media (max-width: 576px) {
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

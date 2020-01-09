@@ -24,6 +24,7 @@
 
   .cd-fixed-bg {
     background-size: contain;
+    background-attachment: scroll;
   }
 }
 

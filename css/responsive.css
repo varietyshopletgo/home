@@ -31,7 +31,7 @@
 /* sm 576-767 */
 @media (max-width: 576px) {
   .top-col {
-    padding: 0 30px;
+    padding: 0 10px;
   }
 }
 

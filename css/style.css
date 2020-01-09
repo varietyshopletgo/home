@@ -102,7 +102,7 @@ TOP
 }
 
 .top-col {
-  padding: 0 50px
+  padding: 0 50px;
 }
 
 .top-vision, .top-title, .top-subtitle, .top-shop {
@@ -147,6 +147,7 @@ SERVICE
   width: 80%;
   font-size: 1.4em;
   margin: 2em auto;
+  text-align: left;
 }
 
 .s-0 {
@@ -265,9 +266,13 @@ aboutus
  transform: rotate(-5deg);
 }
 
-.about {
+.about-wrap {
   background-color:#E2ECBA;
   font-size: 1.2em;
+ overscroll-behavior-x: ;
+}
+
+.about {
   padding:1em 3em 3em 3em;
 }
 
@@ -282,15 +287,9 @@ aboutus
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
+  background-image: url("../image/about/about-test.jpg");
 }
 
-.cd-fixed-bg.cd-bg-1 {
-background-image: url("../image/about/about-test.jpg");
-}
-
-.cd-scrolling-bg {
-  min-height: 100%;
-}
 /*
 ------------------------------------------------
 WORKS
@@ -479,8 +478,11 @@ Contact
 ------------------------------------------------
 */
 .contact {
-  background-color: #F1F1F1;
   padding-bottom: 6.5rem;
+}
+
+.contact-wrap {
+  background-color: #F1F1F1;  
 }
 
 .contact-form p {
@@ -541,6 +543,7 @@ footer {
 } 
 footer h5 {
   padding-top: 1.5rem;
+  color: white;
 }
 
 /*

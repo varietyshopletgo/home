@@ -21,12 +21,6 @@
       font-size: 2rem;/* 20px*/
   } 
 
-  .cd-fixed-bg {
-    background-size: contain;
-    background-attachment: scroll;
-  }
-}
-
 
 /* sm 576-767 */
 @media (max-width: 576px) {

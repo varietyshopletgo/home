@@ -1,383 +1,550 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>バラエティショップ・レットゴー</title>
-  <meta name="description" content="バラエティショップ・レットゴーのサイト。「あなたのイメージを思い通りのカタチに」を理念に、Webサイトのデザインとコーディングに特化した、まちのデジタルホームセンターです。">
+/*
+------------------------------------------------
+RESET
+------------------------------------------------
+*/
 
-  <!-- OGP -->
-  <meta property="og:title" content="バラエティショップ・レットゴー" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://varietyshopletgo.github.io/home/" />
-  <meta property="og:image" content="https://varietyshopletgo.github.io/home/image/ogp.png" />
-  <meta property="og:site_name" content="バラエティショップ・レットゴー" />
-  <meta property="og:description" content="「あなたのイメージを思い通りのカタチに」を理念に、Webサイトのデザインとコーディングに特化したお店です。バラエティショップ・レットゴーはまちのデジタルホームセンターです。" />
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+------------------------------------------------
+COMMON
+------------------------------------------------
+*/
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&display=swap&subset=japanese'); */
+
+@import url('https://fonts.googleapis.com/css?family=Kosugi|Noto+Sans+JP:400,700&display=swap&subset=japanese');
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #222;
+  /* ベースのサイズを10pxとする */
+  /* 32pxにしたいときは3.2remと書く */
+  font-size: 62.5%;
+}
+
+body{
+  font-size:1.6rem;/* 16px*/
+}
+
+section {
+  margin-top : -50px;
+  padding-top : 50px;
+}
+
+/*
+------------------------------------------------
+navibar
+------------------------------------------------
+*/
+.nav-link {
+  color: #fff !important;
+  font-size: 1.4rem !important;
+  font-weight: bold;
+}
+
+.navbar {
+  border-bottom:1px solid #fff;
+}
+
+.navbar-toggler {
+  border-color: rgba(0,0,0,0);
+}
+
+.navbar-nav li {
+  padding-right: 25px;
+}
+/*
+------------------------------------------------
+TOP
+------------------------------------------------
+*/
+.top {
+  background-color: #327D58;
+  padding-bottom: 2.5rem;
+}
+
+.top img {
+  width: 100%;
+}
+
+.top-col {
+  padding: 0 50px;
+}
+
+.top-vision, .top-title, .top-subtitle, .top-shop {
+  margin-top: 3rem;
+}
+
+.top-p {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.scroll img {
+  width: 100px;
+  background-color: #327D58
+}
+
+/*
+------------------------------------------------
+SERVICE
+------------------------------------------------
+*/
+.section-title {
+  margin:6.5em auto
+}
+
+.service {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+
+}
+.service h1 {
+  font-size: 2em;
+  padding-top: 3rem;
+  font-weight: bold !important;
+}
+.service img {
+  /* width: 100%; */
+  padding-top: 3rem;
+}
+
+.service p {
+  width: 80%;
+  font-size: 1.4em;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.s-0 {
+  background: #E2ECBA;
+}
+
+.s-1 {
+  background: #CDE8E9;
+}
+
+.s-2 {
+  background: #CEE7D7;
+}
+
+.s-0, .s-1, .s-2 {
+  padding:.5rem .5rem;
+  margin-bottom: 6.5em;
+}
+
+.marker-pink {
+  background: linear-gradient(transparent 50%, #ffcccc  0%);
+  }
+/*
+------------------------------------------------
+service-message
+------------------------------------------------
+*/
+
+.service-btn p{
+  font-size: 2em;
+  font-weight: bold !important;
+  margin-bottom: 3rem;
+}
+
+.de{
+  background: #CDD866;
+}
+
+.co {
+  background: #94D0C9;
+}
+
+.wr {
+  background: #00803D;
+}
+
+.de, .co, .wr {
+  border-radius: 60px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.service-message {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.service-btn a {
+  font-size: 2rem;
+  margin-bottom: 6.5rem;
+  text-decoration: none !important;
+}
+
+.service-btn a:hover {
+  color:#000;
+}
+
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FDD41F;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #CFA901;
+  border-radius: 3px;
+}
+
+.btn-square-shadow:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+/*
+------------------------------------------------
+aboutus
+------------------------------------------------
+*/
+
+/* タイトル飾り */
+.marker-P-green {
+  background: linear-gradient(transparent 60%, #ccffcc 0%);
+  }
+
+.kakomi-tape3 {
+  font-size: 2rem !important;
+  font-weight: bold;
+  position:relative;
+  padding: 35px 20px 15px;
+  margin: 2em auto;
+  width: 90%;
+  color: #555555; 
+  background-color: #e8ddbd;
+  box-shadow: inset 0 0 40px rgba(204, 186, 136,1), 0 2px 2px #ccc;
+}
+
+.title-tape3 {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  padding: 4px 10px;
+  color: #555555; 
+  font-weight: bold;
+  background-color: rgba(255,255,255,.4);
+  border-left: 2px dotted rgba(0,0,0,.1);
+  border-right: 2px dotted rgba(0,0,0,.1);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+  transform: rotate(-5deg);
+}
+
+.about-wrap {
+  background-color:#E2ECBA;
+  font-size: 1.2em;
+}
+
+.about {
+  padding:1em 3em 3em 3em;
+}
+
+.about-top-img {
+  padding-top: 150px;
+  padding-bottom: 150px; 
+}
+
+.cd-fixed-bg {
+  min-height: 100%;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  /* background-repeat: no-repeat; */
+  background-position: center center;
+  background-image: url("../image/about/about-test.jpg");
+}
+
+/*
+------------------------------------------------
+WORKS
+------------------------------------------------
+*/
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #6648b1;
+}
+
+.btn-primary:hover{
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+
+.work-comment {
+  width: 60%;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.skill-img {
+  width: 100%
+}
+
+.work-message {
+  margin-top: 3rem;
+}
+
+/*
+------------------------------------------------
+Price
+------------------------------------------------
+*/
+#price {
+  background-image: url(../image/price/price-bg.png);
+  background-size: cover;
+}
+
+.price-wrap {
+  background-image: url(../image/price/price-bg.png);
+  background-size: cover;
+  padding-top: 30px;
+}
+
+.price-msg p{
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.table-scope {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+}
+
+table tr {
+  /* background-color: #fff; */
+  background-color:rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #fff;
+}
+
+table tr:nth-child(even){
+  background-color: #eee;
+}
+
+table th,
+table td {
+  padding: .35em 1em;
+}
+
+table thead th {
+    font-size: 1em;
+    padding: 1em;
+}
+
+table thead tr{
+  font-size: 1.5em;
+  background-color: #fd6767;
+  color:#fff;
+}
+
+table tbody th {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.txt{
+   text-align: left;
+   font-size: 1.5em;
+}
+
+.price{
+  text-align: right;
+  color: #FF7043;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.price-table {
+  padding-bottom: 6.5rem;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    width:100%
+  }
+  table th{
+    background-color: #fd6767;
+    display: block;
+    border-right: none;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+    border: 1px solid #fd6767;
+  }
+  table td {
+    border-bottom: 1px dotted #bbb;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    position: relative;
+    padding: 1.5em 1em 1.5em 4em;
+    border-right: none;
+  }
   
-  <!-- Facebook -->
-  <meta property="fb:app_id" content="486606261993983" />
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    color: #000;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table tbody th {
+    color: #fff;
+    padding: 1em
+}
+  table tr:nth-child(even){
+  background-color: #fff;
+}
+}
+/*
+------------------------------------------------
+Contact
+------------------------------------------------
+*/
+
+.contact-wrap {
+  background-color: #f2f2f2;  
+}
+
+.contact-form p {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height:30px;
+}
+
+.contact-submit {
+  /* width: 160px; */
+  margin-top: 10px;
+  margin-bottom:40px;
+  font-size: 16px;
+  background-color: #C4C4C4
+  color #889eab;  
+  display: block;
+}
+
+.contact-form {
+  margin:0 !important;
+}
+
+.contact-text p {
+  padding-top: 1rem;
+}
+
+.contact-hello {
+  margin: 0 auto;
+  width: 300px;
+
+}
+
+/*
+------------------------------------------------
+FOOTER
+------------------------------------------------
+*/
+
+footer {
+  height: 50px;
+  background-color: #327D58 !important;
+} 
+footer h5 {
+  padding-top: 1.5rem;
+  color: white;
+}
+
+/*
+------------------------------------------------
+IMPORT
+------------------------------------------------
+*/
+
+/* .fixed-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- css -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-  
-  <!-- favicon -->
-  <link rel="icon" href="image/favicon-letgo.png" />
-
-  <!-- font -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link href="style.css" rel="stylesheet">
-
-
-  
-</head>
-<body>
-<!-- navibar   -->
-  <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #327D58;” >
-    <div class="container-fluid">
-      <a class="navbar-brand">
-        <img src="image/header-title.png" width="300px">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#service-top">サービス
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#work-top">制作実績</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-top">わたしたちについて</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#price-top">価格表</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact-top">お問合せ</a>
-          </li>
-        </ul>  
-      </div>
-    </nav>
-
-<!-- top -->
-<section id="top-top">
-  <div class="top container-fluid padding">
-    <div class="row text-center top-col">
-      <div class="col-sm-12 col-md-6">
-        <div class="top-vision">
-          <img src="image/top/top-vision.png">
-        </div>
-        <div class="top-title">
-          <img src="image/top/top-title.png">
-        </div>
-        <div class="top-subtitle">
-          <img src="image/top/top-subtitle.png">
-        </div>
-        <!-- <p class="top-p">Webデザインとコーディングで<br>
-          あなたの頭の中にあるイメージを表現するお手伝いをします。</p> -->
-      </div>
-      <div class="top-shop col-sm-12 col-md-6">
-          <img src="image/top/shop-img.png">
-      </div>  
-    </div>
-    <div class="scroll row text-center">
-      <div class="col-12">
-        <img src="image/top/scroll.png">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- service -->
-<section  id="service-top">
-  <div class="container-fluid padding">
-    <div class="row padding text-center">
-      <div class="section-title col-12">
-        <img src="image/service/service-titled.png" width="300px">
-        </div>
-    </div>
-  </div>
-
-<!-- services -->
-  <div class="container">
-    <div class="row text-center padding">
-      <div class="col-md-12 col-lg-4">
-        <div class="service s-0">
-          <h1>ランディングページ(LP)<br>
-          制作</h1>
-          <img src="image/service/lp.png">
-          <p><strong>LP（ランディングページ）</strong>は、商品やサービス・紹介したいものに特化した、<strong>縦に長い１ページのウェブサイト</strong>。シンプルかつ、こだわりを最大限に発揮し、紹介したいものの魅力を伝えるのに最適なウェブページを作成可能です。</p>
-        </div>
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <div class="service s-1">
-          <h1>レスポンシブ対応<br>
-            (スマートフォン対応)</h1>
-            <img src="image/service/responsive.png">
-            <p>すでにあるウェブサイトを、閲覧するデバイスの画面サイズに依存しないウェブサイトに変更します。<strong>レスポンシブデザイン</strong>に対応することで、<strong>スマホやタブレットなど、PC以外の環境でも快適に閲覧できる</strong>ようになります。</p>         
-        </div>
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <div class="service s-2">
-          <h1>既存サイトの<br>
-            修正・リニューアル</h1>
-            <img src="image/service/update.png">
-            <p>今あるウェブサイトに満足しているが、使用しているテキストや画像に<strong>修正したい部分</strong>が出てきた。もしくは心機一転、新しいデザインで<strong>ウェブサイトをリニューアルしたい</strong>。そんなご要望に対応いたします。<br>　</p> 
-        </div>
-    </div>
-   </div>
-  </div>
-
-<!-- service-message -->
-  <div class="container">
-    <div class="row text-center padding service-btn">
-      <div class="col-sm-12 col-md-4">
-        <p class="de">デザイン制作</p>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <p class="co">コーディング</p>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <p class="wr">Webライティング</p>
-      </div>
-      <div class="col-12">
-        <p class="service-message">単品のご依頼も受け付けております。</p>
-      </div>  
-
-      <div class="col-12">
-        <a href="#price-top" class="btn-square-shadow">くわしくはこちら</a>
-      </div>
-      </div>
-   </div>
-</section>
-
-<!-- about -->
-<section id="about-top">
-  <div class="container-fluid cd-fixed-bg">
-    <div class="row padding text-center">
-      <div class="section-title col-12">
-        <img class="about-top-img" src="image/about/aboutus-titled.png" width="300px">
-        </div>
-    </div>
-  </div>
-  <div class="container-fluid padding about-wrap cd-scrolling-bg cd-color-1">
-    <div class="row about">
-      <div class="col-12 display-5 text-center">
-        <div class="kakomi-tape3"><span class="title-tape3">こんにちは！</span>あなたのイメージを思い通りのカタチに！<br>ペラ１枚モノのウェブサイトデザインとコーディングに特化しました。</div>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <p>　バラエティショップ・レットゴーは、<strong class="marker-P-green">ペラ１枚モノのウェブサイトのデザインとコーディング</strong>に特化した３人のチームです。</p>
-        <p>　「あ、ガーデニング始めようかな？」と思ったとき、ふらりとホームセンターに立ち寄るような感覚で、気軽に何でも相談できて、身近に寄り添ったお手伝いができること。</p>
-        <p>　わたしたちのサービスに照らし合わせて言うと、<strong class="marker-P-green">ウェブサイト周りの作業で、今、必要なものだけを必要最低限のコンパクトさで、かつ、気軽に、思い通りにカタチにできること。</strong></p>
-        <p>　それがわたしたち、バラエティショップ・レットゴーの最大の特長です。</p>
-        <p>　代表はソフトハウスで13年間の業務系システム開発の経歴をもとに、現在は個人事業主として、主に個人でお仕事をされている方向けにウェブサイト・CMS導入のサポートや運営代行の業務を行っています。</p>  
-        <p>　また、システム開発以外にも、ウェブサイト運営やSNSの運用、音楽や動画の制作・編集、各種研修業務など幅広い業種で経験を積んできたメンバーと活動しているため、<strong class="marker-P-green">あらゆる業種・職種の案件に対応可能です。</strong></p>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <p>　これまでは３人各々、個人・法人問わずさまざまな規模の案件に携わってきたわたしたちですが、そんなわたしたちの共通点は、<strong class="marker-P-green">クライアントさまから本音のご要望、本当に実現したいもの</strong>を引き出すヒアリングスキルと、それをカタチにできる技術力を兼ね備えていること。</p>
-        <p>「そうそう！ 欲しかったのはこんなウェブサイトなんだ！」</p>  
-        <p>というクライアントさまからの声をもっともっと聞きたくて、それぞれの得意分野を活かして活動しています。</p>  
-        <p>　サイトを作りたいけど、まだ何となくのカタチしか想像できない… こんな感じ、というイメージはあるけど、具体的なウェブサイトのカタチはよくわからない…</p>  
-        <p>　そんなあなたが、思い通りのウェブサイトを作るお手伝いをさせていただけたらうれしいです。</p>  
-        <p>　ご興味を持っていただけましたら、<strong class="marker-P-green">メッセージでお気軽にご相談くださいませ。</strong></p><br><br>
-        <p>ご連絡をお待ちしております！</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- works -->
-  <section id="work-top">
-    <div  class="container-fluid padding">
-      <div class="row padding text-center">
-        <div class="section-title col-12">
-          <img src="image/work/works-titled.png" width="300px">
-          </div>
-      </div>
-    </div>
-    <div id="slides" class="carousel slide" data-ride="carousel">
-      <ul class="carousel-indicators">
-        <li data-target="#slides" data-slide-to="0" class="active"></li>
-        <li data-target="#slides" data-slide-to="1"></li>
-        <li data-target="#slides" data-slide-to="2"></li>
-      </ul>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="image/work/test00.jpg" alt="">
-          <!-- <div class="carousel-caption">
-            <h1 class="display-2">Bootstrap</h1>
-            <h3>Complete Website Layout</h3>
-            <button type="button" class="btn btn-outline-light btn-lg">VIEW</button>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="image/work/test01.jpg" alt="">
-        </div>
-        <div class="carousel-item">
-          <img src="image/work/test02.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid work-message">
-      <div class="row text-center">
-        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-          <img class="work-comment" src="image/work/goodfeel.png" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- price -->
-<section id="price-top">
-  <div class="price-wrap">
-    <div class="container-fluid">
-      <div class="row padding text-center section-title">
-        <div class="col-12">
-          <img src="image/price/price-titled.png" width="300px">
-          <div class="price-msg">
-            <p>内容、納期、予算等により価格は変動します。<br>
-              ご相談の際に、要望をお聞かせください</p>
-          </div>
-          </div>
-      </div>
-    </div>
-    <div class="container-fluid padding price-table">
-      <table>
-        <thead>
-            <tr>
-                <td></td>
-                <th scope="col"><p class="table-scope">内容</p></th>
-                <th scope="col"><p class="table-scope">価格</p></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>ランディングページ作成</th>
-                <td data-label="内容" class="txt">ランディングページ（LP）作成を行います。（デザイン込み1ページ）</td>
-                <td data-label="価格" class="price">¥100,000～</td>
-            </tr>
-            <tr>
-                <th>WEBデザイン作成</th>
-                <td data-label="内容" class="txt">WEBサイトのコンセプトの作成を行います。</td>
-                <td data-label="価格"class="price">¥70,000～</td>
-            </tr>
-            <tr>
-                <th>WEBコーディング（トップ）</th>
-                <td data-label="内容" class="txt">WEBサイトのトップページのコーディング作業を行います。</td>
-                <td data-label="価格"class="price">¥50,000～</td>
-            </tr>
-          <tr>
-                <th>WEBコーディング（下層）</th>
-                <td data-label="内容" class="txt">WEBサイトの下層ページのコーディング作業を行います。</td>
-                <td data-label="価格" class="price">¥30,000～</td>
-            </tr>
-            <tr>
-                <th>レスポンシブ化（スマホ対応）</th>
-                <td data-label="内容" class="txt">スマートフォンやタブレットで閲覧をした際の表示形式に合わせてWEBページをカスタマイズします。</td>
-                <td data-label="価格"class="price">¥30,000～</td>
-            </tr>
-            <tr>
-                <th>WordPress化</th>
-                <td data-label="内容" class="txt">既存サイトのWordPress化をします。</td>
-                <td data-label="価格"class="price">¥50,000～</td>
-            </tr>
-          <tr>
-                <th>サイトの修正（1箇所）</th>
-                <td data-label="内容" class="txt">既存サイトの修正作業を実施します。<Br>例：キャンペーンのためにトップ画像の差し替え等</td>
-                <td data-label="価格" class="price">¥2,000～</td>
-            </tr>
-            <tr>
-                <th>流し込み</th>
-                <td data-label="内容" class="txt">既存のページを更新作業をご自身で対応しやすい仕様にします。<Br>レイアウトが同一でCSSの変更がなく、テキスト、画像、リンクのみを差し替えるページにする作業をします。</td>
-                <td data-label="価格"class="price">1ページあたり¥2,000～</td>
-            </tr>
-            <tr>
-              <th>アニメーションの追加</th>
-              <td data-label="内容" class="txt">アニメーション（フェードイン、スムーズスクロールなど）の追加をして<Br>ホームページに動きを付けます。</td>
-              <td data-label="価格"class="price">￥10,000～</td>
-          </tr>
-          <tr>
-            <th>ページの追加</th>
-            <td data-label="内容" class="txt">WEBページの追加作成です。<Br>例：コンテンツページを1ページ追加作成</td>
-            <td data-label="価格"class="price">￥30,000~</td>
-        </tr>
-        <tr>
-          <th>WEBライティング</th>
-          <td data-label="内容" class="txt">WEBページの記事の作成を行います。</td>
-          <td data-label="価格"class="price">文字単価￥1.5円～</td>
-      </tr>
-        </tbody>
-      </table>   
-    </div>
-  </div>
-</section>
-
-<!-- contact -->
-<section id="contact-top">
-  <div class="contact-wrap">
-    <div class="container padding contact">
-      <div class="row padding text-center">
-        <div class="section-title col-12">
-          <img src="image/contact/contact-titled.png" width="300px">
-          </div>
-      </div>
-    </div>
-  
-    <div class="containar">
-      <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe-3WACMhIBpSN_MI7uFGi9c8Z6oayoseg3P0JuMU7Nwnv5iA/formResponse">
-      <div class="row contact-form">
-        <div class="form-group col-10 offset-1">
-          <label for="name" class="mt-4">お名前／会社名（必須）</label>
-          <input id="name" type="text" name="entry.1534871579" class="form-control" placeholder="バラエティショップ・レットゴー" required>
-        </div>
-      </div>
-      <form>
-        <div class="row  contact-form">
-          <div class="form-group col-10 offset-1">
-            <label for="email">メールアドレス（必須）</label>
-            <input id="email" type="email" name="entry.548437954" class="form-control" aria-describedby="emailHelp" placeholder="varietyshopletgo@gmail.com" required>
-          </div>
-        </div>
-        <div class="row  contact-form">
-          <div class="mb-3 col-10 offset-1">
-            <label for="msg">メッセージ本文</label>
-            <textarea class="form-control" id="msg" name="entry.519001623" placeholder="お気軽にお問い合わせください。"></textarea>
-          </div>
-        </div>
-        <div class="row padding text-center contact-form">
-          <div class="col-12">
-            <button type="submit" name="button" class="btn btn-lg btn-primary" mt-5>送信</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center" >
-      <img class="work-comment" src="image/contact/hello.png" alt="">
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container-fluid padding">
-    <div class="row text-center">
-      <div class="col-12">
-        <h5>&copy;2020 バラエティショップ・レットゴー</h5>
-      </div>  
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+}
+ 
+.bg01 {
+  background-image: url(../image/about/about-bg.png);
+} */
